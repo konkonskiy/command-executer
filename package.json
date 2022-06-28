@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pavel Samoilov",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^9.0.0"
+    "inquirer": "^8.2.0"
   },
   "devDependencies": {
     "@types/inquirer": "^8.2.1"
