@@ -27,7 +27,7 @@ ffmpeg -i ${path} -c:v libx264 -s ${width}x${height} /${path}/${name}.mp4
 #### Dependencies
 
 - inquirer - 8.2.0
-- Node.js - v16.15.1
+- Node.js - 16.15.1
 
 ###### Node lib
 
