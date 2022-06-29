@@ -4,7 +4,7 @@ import { IStreamLogger } from './../handlers/stream-logger.interface'
 
 /* Template Method */
 
-abstract class CommandExecutor<Input> {
+export abstract class CommandExecutor<Input> {
   constructor(private logger: IStreamLogger) {}
 
   public async execute() {

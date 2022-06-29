@@ -15,7 +15,7 @@ export class ConsoleLogger implements IStreamLogger {
     console.error(`Завершено`)
   }
 
-  public get(): ConsoleLogger {
+  public static get(): ConsoleLogger {
     if (!ConsoleLogger.instance) {
       ConsoleLogger.instance = new ConsoleLogger()
     }

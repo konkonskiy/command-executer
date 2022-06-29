@@ -9,15 +9,19 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const console_logger_1 = require("./out/console-logger/console-logger");
-const ffmpeg_executor_1 = require("./commands/ffmpeg/ffmpeg.executor");
-class App {
-    run() {
+exports.CommandExecutor = void 0;
+/* Template Method */
+class CommandExecutor {
+    constructor(logger) {
+        this.logger = logger;
+    }
+    execute() {
         return __awaiter(this, void 0, void 0, function* () {
-            new ffmpeg_executor_1.FfmpegExecutor(console_logger_1.ConsoleLogger.get()).execute();
+            const input = yield this.prompt();
+            const command = this.bild(input);
+            const stream = this.spawn(command);
+            this.processStream(stream, this.logger);
         });
     }
 }
-const app = new App();
-// console.log('🚀 ~ file: App.ts ~ line 10 ~ app.run()', app.run())
-app.run();
+exports.CommandExecutor = CommandExecutor;
