@@ -1,7 +1,7 @@
 # command-executer
 This is a command executer to Node.js and TypeScript
 
-In this case App work to  [Ffmpeg programm](https://ffmpeg.org/)
+In this case App work to  [Ffmpeg program](https://ffmpeg.org/)
 
 ## Run util command
 
